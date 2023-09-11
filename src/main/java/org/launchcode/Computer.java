@@ -2,7 +2,7 @@ package org.launchcode;
 
 public class Computer {
 
-    public void Computer () {
+    public static void main () {
 
 
     }
