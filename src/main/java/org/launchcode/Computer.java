@@ -6,57 +6,64 @@ import java.util.Scanner;
 
 public class Computer {
 
-    public ArrayList<String> programs;
+    private boolean mouse = true;
 
-    public String userName;
+    private String userName;
 
-    public HashMap<String, String> files;
+    private boolean portable = false;
 
-
+    private boolean charger = false;
 
 
     public Computer (String aUserName) { userName = aUserName; }
 
-    public ArrayList<String> getPrograms() {
-        return programs;
+
+    public boolean hasMouse() {
+        return mouse;
     }
-    public void setPrograms(ArrayList<String> programs) {
-        this.programs = programs;
+
+    public void setHasMouse(boolean aMouse) {
+        this.mouse = aMouse;
     }
 
     public String getUserName() {
         return userName;
     }
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-    public HashMap<String, String> getFiles() {
-        return files;
+    public void setUserName(String aUserName) {
+        this.userName = aUserName;
     }
 
-    public void setFiles(HashMap<String, String> files) {
-        this.files = files;
+    public boolean isPortable() {
+        return portable;
+    }
+
+    public void setPortable(boolean aPortable) {
+        portable = aPortable;
+    }
+
+    public boolean hasCharger() {
+        return charger;
+    }
+
+    public void setCharger(boolean charger) {
+        this.charger = charger;
     }
 
     public String userInfo () {
         return (userName + " is signed in.");
     }
 
-    public ArrayList<String> addProgram () {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter the program name: ");
-        String newProgram;
 
-        do {
-            newProgram = input.nextLine();
-
-            if (!newProgram.isEmpty()) ;
-            {
-                programs.add(newProgram);
-            }
-        } while (!newProgram.isEmpty());
-
-        return programs;
+    public void accessories() {
+        mouse = true;
+        charger = false;
     }
+
+    public String operatingSystem() { return ("Windows 11");}
 }
+
+
+
+
+
 

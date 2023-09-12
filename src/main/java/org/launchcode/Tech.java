@@ -10,7 +10,8 @@ public class Tech {
 
     public static void main (String[] args){
         Computer erinGaming = new Computer("Erin");
-        erinGaming.addProgram();
+
+
 
 
 
