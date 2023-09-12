@@ -10,6 +10,11 @@ public class Tech {
 
     public static void main (String[] args){
         Computer erinGaming = new Computer("Erin");
+        Smartphone galaxy = new Smartphone("moozie", 1234);
+        Laptop lenovo = new Laptop("Schneider");
+
+        Smartphone.isCharged();
+        System.out.println(Smartphone.isCharged());
 
 
 

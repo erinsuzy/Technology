@@ -12,7 +12,7 @@ public class Computer {
 
     private boolean portable = false;
 
-    private boolean charger = false;
+    private static boolean charger = false;
 
 
     public Computer (String aUserName) { userName = aUserName; }
@@ -41,12 +41,12 @@ public class Computer {
         portable = aPortable;
     }
 
-    public boolean hasCharger() {
-        return charger;
+    public static boolean hasCharger() {
+        return !charger;
     }
 
     public void setCharger(boolean charger) {
-        this.charger = charger;
+        Computer.charger = charger;
     }
 
     public String userInfo () {
